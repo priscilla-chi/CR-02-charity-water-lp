@@ -186,6 +186,29 @@ p {
   border-radius: 2px;
 }
 
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  nav ul {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 247, 225, 0.95);
+    position: absolute;
+    top: 70px; /* below nav bar */
+    right: 10px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    z-index: 1;
+  }
+  nav ul.show {
+    display: flex; /* Show menu when .show is added */
+  }
+}
+
 /* Responsive styles for tablets and phones */
 @media (max-width: 900px) {
   .content {
