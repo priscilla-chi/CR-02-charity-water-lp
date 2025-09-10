@@ -1,4 +1,6 @@
 /* styles.css */
+
+/* Reset default browser styles and set a clean font */
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +8,15 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
+/* Set a background image and color for the whole page */
 body {
   background: url(/img/charity.jpg) no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   color: #333;
   position: relative;
 }
 
+/* Add a soft overlay to make text easier to read */
 .overlay {
   background: rgba(255, 247, 225, 0.75); /* soft warm overlay */
   position: absolute;
@@ -25,6 +27,7 @@ body {
   z-index: 0;
 }
 
+/* Style the navigation bar */
 nav {
   position: relative;
   z-index: 1;
@@ -33,17 +36,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 247, 225, 0.8);
-  backdrop-filter: blur(5px);
+  background-color: rgba(255, 247, 225, 0.9);
+  box-shadow: 0 2px 8px rgba(119, 168, 187, 0.08);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffc907;
-  font-family: 'Avenir', sans-serif;
+/* Style the logo image */
+.logo img {
+  height: 40px;
+  vertical-align: middle;
 }
 
+/* Style the navigation links */
 nav ul {
   list-style: none;
   display: flex;
@@ -54,55 +57,49 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav ul li a:hover {
-  color: #77a8bb; /* brand accent */
+  background: #77a8bb;
+  color: #fff;
 }
 
+/* Main content styles */
 .content {
   position: relative;
   z-index: 1;
   max-width: 500px;
-  /* Move content to the left side */
   margin: 60px 0 0 5%;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Align text to the left */
-  background: rgba(255,255,255,0.0); /* No background so photo shows */
+  align-items: flex-start;
+  background: rgba(255,255,255,0.0); /* transparent so photo shows */
 }
 
-/* On small screens, let content take full width and add padding */
-@media (max-width: 768px) {
-  .content {
-    margin: 0;
-    padding: 20px;
-    max-width: 100%;
-    align-items: flex-start;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-}
-
+/* Headline styles */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #333;
   font-family: 'Nunito Sans', sans-serif;
+  text-shadow: 1px 1px 8px #fff7e1;
 }
 
+/* Paragraph styles */
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
   line-height: 1.5;
   color: #444;
   font-family: 'Avenir', sans-serif;
 }
 
+/* Donate box styles */
 .donate-box {
   display: flex;
   align-items: center;
@@ -110,35 +107,38 @@ p {
   border-radius: 10px;
   overflow: hidden;
   max-width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(119,168,187,0.10);
+  margin-bottom: 10px;
 }
 
 .donate-box span {
   padding: 15px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #333;
   background-color: #fff7e1;
   font-family: 'Avenir', sans-serif;
 }
 
+/* Make the donate button stand out */
 .donate-btn {
   background: #ffc907; /* bright yellow */
   color: #000;
   border: none;
-  padding: 18px 28px; /* bigger button */
-  font-size: 1.1rem; /* larger text */
+  padding: 18px 28px;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   border-radius: 0 10px 10px 0;
-  box-shadow: 0 6px 18px rgba(255, 201, 7, 0.25); /* yellow glow */
-  transition: all 0.3s ease, box-shadow 0.3s;
+  box-shadow: 0 6px 18px rgba(255, 201, 7, 0.25);
+  transition: background 0.3s, box-shadow 0.3s;
   font-family: 'Nunito Sans', sans-serif;
-  outline: 3px solid #fff7e1; /* subtle outline */
+  outline: 3px solid #fff7e1;
   outline-offset: -6px;
   animation: pulse 1.5s infinite;
 }
 
+/* Add a pulsing animation to the donate button */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 201, 7, 0.5);
@@ -151,49 +151,16 @@ p {
   }
 }
 
-@media (max-width: 600px) {
-  .donate-box {
-    flex-direction: column;
-    max-width: 100%;
-    width: 100%;
-    border-radius: 10px;
-  }
-  .donate-box span,
-  .donate-btn {
-    border-radius: 0;
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 1.1rem;
-  }
-  .donate-btn {
-    border-radius: 0 0 10px 10px;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .content {
-    margin: 0;
-    padding: 20px;
-    max-width: 100%;
-    align-items: flex-start;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
+/* Thank you message style */
+#thankYouMsg {
+  color: #228B22;
+  font-weight: bold;
+  margin-top: 20px;
+  background: #fff7e1;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(119,168,187,0.08);
+  display: none;
 }
 
 /* Hamburger menu styles for beginners */
@@ -219,18 +186,40 @@ p {
   border-radius: 2px;
 }
 
-/* Show hamburger on small screens */
+/* Responsive styles for tablets and phones */
+@media (max-width: 900px) {
+  .content {
+    margin: 40px 0 0 3%;
+    max-width: 90vw;
+  }
+}
+
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 10px;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
   .hamburger {
     display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
+
   nav ul {
     display: none; /* Hide menu by default */
     flex-direction: column;
     gap: 10px;
-    background: rgba(255, 247, 225, 0.95);
+    background: rgba(255, 247, 225, 0.97);
     position: absolute;
-    top: 70px; /* below nav bar */
+    top: 60px;
     right: 10px;
     padding: 20px 30px;
     border-radius: 10px;
@@ -239,6 +228,42 @@ p {
   }
   nav ul.show {
     display: flex; /* Show menu when .show is added */
+  }
+
+  .content {
+    margin: 20px 0 0 3%;
+    padding: 20px;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .donate-box {
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .donate-box span,
+  .donate-btn {
+    border-radius: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.1rem;
+  }
+  .donate-btn {
+    border-radius: 0 0 10px 10px;
+    margin-top: 0;
+  }
+  .content {
+    margin: 10px 0 0 0;
+    padding: 10px;
   }
 }
 
