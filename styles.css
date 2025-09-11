@@ -75,7 +75,8 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;   /* Center all items horizontally */
+  text-align: center;    /* Center the text inside the box */
 }
 
 /* Headline styles */
