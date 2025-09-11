@@ -10,7 +10,7 @@
 
 /* Set a background image and color for the whole page */
 body {
-  background: url("/img/charity.jpg") no-repeat center center/cover;
+  background: url("https://cdn2.dropmarkusercontent.com/52043/c05a0bc8bfb372eb48d3dc9dca6a0a3c5a6358f8ffd2167bc87f1fe22fcea614/preview/Malawi_2023_CG-7549.jpg?Expires=1757554891&Signature=cwtcsfI7JMVFE5OIUN-PiVLs5GfOe9GvmdEoWZ76NMZGvHOsRvcEbKQ3SDAX0FNUU7hdlu-yccwwgvGQZwwyaujquyb0ptDj3by4VJQfvvU2zmSteNgC38tFW~xS9MkJXRks0~4tfSIkAKGfUKKc3Mfi7bFdbDD~RRyQUaK1S3gKEqmmnPG37p8Pb5WuDcnp-ic7JZPizsyIoTp7zH6B1VNZ1nDN04AxD9l-kW98WrahEAb7RihkbH8PPJTTYRYhxJ6NR7FNE26kaN5k2c8lKe1Pe7pYj1Wp84v4O8fGyoe3MVhp4sN-RtPYr0Goqtirj2y9vBmdb5pAEL0R1EOIOg__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ") no-repeat center center/cover;
   min-height: 100vh;
   color: #333;
   position: relative;
