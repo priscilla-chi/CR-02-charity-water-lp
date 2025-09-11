@@ -10,7 +10,7 @@
 
 /* Set a background image and color for the whole page */
 body {
-  background: url(/img/charity.jpg) no-repeat center center/cover;
+  background: url("/img/charity.jpg") no-repeat center center/cover;
   min-height: 100vh;
   color: #333;
   position: relative;
